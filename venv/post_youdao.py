@@ -1,0 +1,19 @@
+import requests
+url="http://fanyi.youdao.com/translate_o?smartresult=dict&smartresult=rule"
+form_date={
+    'i':'我和你都是中国人',
+    'form':'AUTO',
+    'to':'A',
+    'smartresult':'dict',
+    'client':'fanyideskweb',
+    'salt':'15874584542121',
+    'sign':'c5a48d9dbfcfd12fca25371c0624b210',
+    'ts':'1587458454212',
+    'bv':'aba2eb413aab2b3c6b790cc4b2ce2dc8',
+    'doctype':'json',
+    'version':'2.1',
+    'keyfrom':'fanyi.web',
+    'action':'FY_BY_REALTlME',
+}
+response=requests.post(url,form_date)
+print(response.text)
